@@ -9,3 +9,6 @@ def progress_check_mode(repo):
     if choice not in ['1', '2', '3']:
         print("Nieprawidłowy poziom.")
         return
+
+    level_f = ....get_by_level(int(choice)) #do uzupełnienia po zrobieniu bazy
+    all_f = ....get_all() #do uzupelnienia
