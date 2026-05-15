@@ -12,3 +12,7 @@ def progress_check_mode(repo):
 
     level_f = ....get_by_level(int(choice)) #do uzupełnienia po zrobieniu bazy
     all_f = ....get_all() #do uzupelnienia
+
+    if not level_f:
+        print("Brak fiszek na tym poziomie.")
+        return
