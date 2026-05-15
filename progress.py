@@ -1,3 +1,6 @@
+import random
+import time
+
 def progress_check_mode(repo):
     print("\nWybierz poziom trudności testu:")
     print("1. Łatwy (Podstawy)")
@@ -16,3 +19,5 @@ def progress_check_mode(repo):
     if not level_f:
         print("Brak fiszek na tym poziomie.")
         return
+
+    random.shuffle(level_f)
