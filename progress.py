@@ -21,3 +21,8 @@ def progress_check_mode(repo):
         return
 
     random.shuffle(level_f)
+    test_set = level_f[:15]
+    correct, total = 0, 0
+    start_time = time.time()
+
+    print(f"\nRozpoczynasz sprawdzian z poziomu {choice}. Do rozwiązania: {len(test_set)} zadań.")
