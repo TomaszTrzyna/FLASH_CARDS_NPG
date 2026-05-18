@@ -10,19 +10,34 @@ class FlashcardRepository:
         self.load()
 
     def load(self):
-        #Wczytanie fiszek z JSON jako obiekty typu Flashcard lub stworzenie bazowego w przypadku jego braku
+        if not os.path.exists(self.filename):
+            self._create_initial_data()
+        with open(self.filename, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            self.flashcards = [
+                Flashcard(item['pl'], item['en'], item.get('level', 1)) for item in data
+            ]
 
     def save(self):
-        #Zapis fiszek poprzez ich konwersję powrotną
+        with open(self.filename, 'w', encoding='utf-8') as f:
+            json.dump([fc.to_dict() for fc in self.flashcards], f, ensure_ascii=False, indent=4)
 
     def add(self, pl, en, level):
-        #Dodanie nowej fiszki o ile nie istnieje i zapis
+        pl_l = pl.lower()
+        en_l = en.lower()
+        for fc in self.flashcards:
+            if fc.pl.lower() == pl_l and fc.en.lower() == en_l:
+                return False
+
+        self.flashcards.append(Flashcard(pl, en, level))
+        self.save()
+        return True
 
     def get_all(self):
-        #Zwrócenie wszystkich fiszek
+        return self.flashcards
 
     def get_by_level(self, level):
-        #Zwrócenie tylko fiszek na danym levelu
+        return [fc for fc in self.flashcards if fc.level == level]
 
     def _create_initial_data(self):
 
