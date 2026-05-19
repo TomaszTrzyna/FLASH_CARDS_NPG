@@ -45,11 +45,35 @@ class FlashcardRepository:
 
         data = []
         easy = [
-            ("pies", "dog")] #Stworzenie więcej fiszek bazowych
+            ("pies", "dog"), ("kot", "cat"), ("dom", "house"), ("woda", "water"), ("chleb", "bread"),
+            ("mama", "mother"), ("tata", "father"), ("syn", "son"), ("córka", "daughter"), ("brat", "brother"),
+            ("siostra", "sister"), ("słońce", "sun"), ("księżyc", "moon"), ("dzień", "day"), ("noc", "night"),
+            ("jeden", "one"), ("dwa", "two"), ("trzy", "three"), ("czerwony", "red"), ("niebieski", "blue"),
+            ("zielony", "green"), ("żółty", "yellow"), ("biały", "white"), ("czarny", "black"), ("duży", "big"),
+            ("mały", "small"), ("zimny", "cold"), ("gorący", "hot"), ("dobry", "good"), ("zły", "bad"),
+            ("szkoła", "school"), ("książka", "book"), ("jabłko", "apple"), ("mleko", "milk"), ("herbata", "tea")
+        ]
         medium = [
-            ("pomarańcza", "orange"), ("pomarańczowy", "orange")]
+            ("pomarańcza", "orange"), ("pomarańczowy", "orange"), ("samochód", "car"), ("auto", "car"),
+            ("pociąg", "train"), ("rower", "bicycle"), ("miasto", "city"), ("ulica", "street"), ("sklep", "shop"),
+            ("praca", "work"), ("pieniądze", "money"), ("zegarek", "watch"), ("czas", "time"), ("rok", "year"),
+            ("tydzień", "week"), ("miesiąc", "month"), ("dzisiaj", "today"), ("jutro", "tomorrow"),
+            ("wczoraj", "yesterday"),
+            ("niebo", "sky"), ("deszcz", "rain"), ("śnieg", "snow"), ("wiatr", "wind"), ("drzewo", "tree"),
+            ("kwiat", "flower"), ("rzeka", "river"), ("morze", "sea"), ("góra", "mountain"), ("ptak", "bird"),
+            ("ryba", "fish"), ("obiad", "dinner"), ("śniadanie", "breakfast"), ("kawa", "coffee"), ("sok", "juice")
+        ]
         hard = [
-            ("wyzwanie", "challenge")]
+            ("wyzwanie", "challenge"), ("sukces", "success"), ("wyobraźnia", "imagination"), ("wiedza", "knowledge"),
+            ("środowisko", "environment"), ("społeczeństwo", "society"), ("rozwój", "development"),
+            ("doświadczenie", "experience"),
+            ("możliwość", "opportunity"), ("odpowiedzialność", "responsibility"), ("niezależność", "independence"),
+            ("bezpieczeństwo", "security"), ("przyszłość", "future"), ("przeszłość", "past"), ("obecność", "presence"),
+            ("równowaga", "balance"), ("umiejętność", "skill"), ("cel", "goal"), ("marzenie", "dream"),
+            ("podróż", "journey"), ("odkrycie", "discovery"), ("nauka", "science"), ("sztuka", "art"),
+            ("zdrowie", "health"), ("choroba", "disease"), ("lekarstwo", "medicine"), ("pamięć", "memory"),
+            ("wrażenie", "impression"), ("zachowanie", "behavior"), ("decyzja", "decision"), ("wolność", "freedom")
+        ]
 
         for p, e in easy: data.append({"pl": p, "en": e, "level": 1})
         for p, e in medium: data.append({"pl": p, "en": e, "level": 2})
