@@ -26,3 +26,11 @@ def progress_check_mode(repo):
     start_time = time.time()
 
     print(f"\nRozpoczynasz sprawdzian z poziomu {choice}. Do rozwiązania: {len(test_set)} zadań.")
+
+    for fc in test_set:
+        result = ask_flashcard(fc, all_f)
+        if result is None: break
+        total += 1
+        if result: correct += 1
+
+    if total > 0: print_stats(start_time, correct, total)
