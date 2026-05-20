@@ -25,8 +25,4 @@ def print_stats(start_time,correct,total):
     print(f"Skuteczność: {percent:.2f}%")
     print(f"Średni czas odpowiedzi: {avg_time:.2f} s")
     print(f"Ocena: {grade}")
-
-
-
-
     print("--------------------------\n")
