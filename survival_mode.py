@@ -10,6 +10,7 @@ def survival_mode(repo):
     correct, total, mistakes = 0, 0, 0
     start_time = time.time()
 
+
     print("\n--- TRYB PRZETRWANIA: 3 BŁĘDY I KONIEC ---")
 
     for fc in flashcards:
