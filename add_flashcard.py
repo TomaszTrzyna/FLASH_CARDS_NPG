@@ -10,7 +10,10 @@ def add_flashcard_mode(repo):
     if pl and en and lvl in ['1', '2', '3']:
 
         if repo.add(pl, en, int(lvl)):
-            print("Fiszka została pomyślnie dodana do bazy!")
+            print("Fiszka została pomyślnie dodana do bazy.")
 
         else:
             print("BŁĄD: Ta konkretna para słów już istnieje w słowniku.")
+    else:
+
+        print("BŁĄD: Nieprawidłowe dane wejściowe.")
