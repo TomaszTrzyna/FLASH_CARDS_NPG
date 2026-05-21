@@ -1,6 +1,9 @@
 import random
 import time
 
+from ask import ask_flashcard
+from stats import print_stats
+
 def progress_check_mode(repo):
     print("\nWybierz poziom trudności testu:")
     print("1. Łatwy (Podstawy)")
