@@ -14,5 +14,6 @@ def learning_mode(repo):
         if result is None: break
         total += 1
         if result: correct += 1
-        if total > 0:
-            print_stats(start_time, correct, total)
+
+    if total > 0:
+        print_stats(start_time, correct, total)
