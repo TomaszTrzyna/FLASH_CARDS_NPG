@@ -1,7 +1,7 @@
 from repository import FlashcardRepository
 from learning import learning_mode
 from progress import progress_check_mode
-from survival import survival_mode
+from survival_mode import survival_mode
 from add_flashcard import add_flashcard_mode
 
 
